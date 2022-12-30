@@ -1,0 +1,23 @@
+<meta charset="UTF-8">
+<script>
+    function pulaLinha(){
+        document.write("<br>");
+        document.write("<br>");
+    }
+
+    function mostra(frase) {
+        pulaLinha();
+        document.write(frase);
+    }
+
+    var limite = parseInt(prompt("Entre com a data Limite: "));
+    var anoCopa = 1930;
+
+    while(anoCopa < limite){
+        mostra("Teve compra em: " + anoCopa);
+        anoCopa += 4;
+    }
+
+    mostra("Fim!");
+
+</script>
