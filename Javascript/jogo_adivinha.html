@@ -6,16 +6,26 @@
     }
 
     function mostra(frase) {
+        pulaLinha();
         document.write(frase);
     }
 
-    var numeroPensado = Math.round(Math.random()*10);
+    function sorteia(num){
+        return Math.round(Math.random() * num);
+    }
+    
+    var numeroPensado = sorteia(10);
+    console.log(numeroPensado);
+    //var numeroPensado = Math.round(Math.random()*10);
     var chute = parseInt(prompt("Digite seu chute!"));
 
     if(chute == numeroPensado){
         mostra("Voce acertou! O numero era: " + numeroPensado)
     } else {
         mostra("Voce errou! O numero pesando foi: " + numeroPensado)
+        if(chute > numeroPensado){
+            mostra("O numero é menor do que chutou!!!")
+        } else{mostra("O número é maior do que chutou!!!")}
     }
 
 </script>
