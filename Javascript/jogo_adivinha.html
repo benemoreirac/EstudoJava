@@ -14,18 +14,21 @@
         return Math.round(Math.random() * num);
     }
     
-    var numeroPensado = sorteia(10);
-    console.log(numeroPensado);
-    //var numeroPensado = Math.round(Math.random()*10);
-    var chute = parseInt(prompt("Digite seu chute!"));
+    var numeroPensado = Math.round(Math.random() * 10);
+    //var numeroPensado = 1;
+    var tentativas = 1;
+    while( tentativas <=3 ){
+        var chute = parseInt(prompt("Digite seu chute!"));
 
-    if(chute == numeroPensado){
-        mostra("Voce acertou! O numero era: " + numeroPensado)
-    } else {
-        mostra("Voce errou! O numero pesando foi: " + numeroPensado)
-        if(chute > numeroPensado){
-            mostra("O numero é menor do que chutou!!!")
-        } else{mostra("O número é maior do que chutou!!!")}
+        if(chute == numeroPensado){
+            mostra("Voce acertou!!!" );
+            break;
+        } else {
+            alert("Voce errou! Tente novamente!");
+            if(chute > numeroPensado){
+                mostra("O numero é menor do que chutou!!!")
+            } else{mostra("O número é maior do que chutou!!!")}
+        }
+        tentativas ++;
     }
-
 </script>
